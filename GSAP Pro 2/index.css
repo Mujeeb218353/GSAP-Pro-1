@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: gilroy, sans-serif;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: rgb(24, 24, 27, 1);
+}
+
+#open-menu,
+#close-menu {
+  cursor: pointer;
+  transition: background-color 1s ease;
+}
+
+#open-menu:hover,
+#close-menu:hover {
+  background-color: rgba(255, 255, 255, 0.53);
+}
+
+#close-menu:active {
+  animation: active-background-animation 2s forwards;
+}
+
+@keyframes active-background-animation {
+  0% {
+    background-color: rgba(255, 255, 255, 0.877);
+  }
+  100% {
+    background-color: rgba(255, 255, 255, 0.226);
+  }
+}

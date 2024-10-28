@@ -1,5 +1,5 @@
 {
-  "name": "gsap-pro-1",
+  "name": "gsap-pro-2",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -19,6 +19,7 @@
     "vite": "^5.4.9"
   },
   "dependencies": {
-    "gsap": "^3.12.5"
+    "gsap": "^3.12.5",
+    "remixicon": "^4.4.0"
   }
 }
