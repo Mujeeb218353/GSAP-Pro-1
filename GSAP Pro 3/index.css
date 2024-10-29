@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: gilroy, sans-serif;
+  color: white;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: rgb(24, 24, 27, 1);
+}
+
+h1 span{
+  display: inline-block;
+}
