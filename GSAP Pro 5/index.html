@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>GSAP Pro 5</title>
+  </head>
+  <body>
+    <section class="w-full h-ful relative">
+      <nav class="w-full flex items-center p-5 overflow-x-hidden">
+        <div class="w-full flex justify-between items-center" id="navbar">
+          <h1
+            class="text-lg lg:text-2xl xl:text-3xl font-bold flex justify-center items-center gap-1"
+            id="logo-lg-screen"
+          >
+            <i class="ri-shining-2-fill rotate-45 inline-block text-5xl"></i>
+            WizardZ
+          </h1>
+          <div
+            class="hidden md:flex justify-center items-center gap-6 md:gap-7 lg:gap-10 xl:gap-12"
+          >
+            <h4 class="text-sm lg:text-lg font-semibold">About Us</h4>
+            <h4 class="text-sm lg:text-lg font-semibold">Services</h4>
+            <h4 class="text-sm lg:text-lg font-semibold">Use Cases</h4>
+            <h4 class="text-sm lg:text-lg font-semibold">Pricing</h4>
+            <h4 class="text-sm lg:text-lg font-semibold">Blog</h4>
+            <button
+              class="text-[.8rem] lg:text-lg font-semibold p-[0.7rem] rounded-lg border border-black"
+            >
+              Request a quote
+            </button>
+          </div>
+          <button class="md:hidden" id="open-menu">
+            <i class="ri-menu-3-line text-2xl"></i>
+          </button>
+        </div>
+
+        <div class="w-full h-full fixed top-0 right-[-100%] bg-white z-10" id="side-bar">
+          <div class="w-full h-full flex items-center flex-col gap-8" id="side-bar">
+            <button id="close-menu" class="w-full">
+              <i class="ri-close-line absolute top-2 left-2"></i>
+            </button>
+            <h1
+              class="text-lg font-bold flex justify-center items-center gap-1"
+              id="logo-sm-screen"
+            >
+              <i class="ri-shining-2-fill rotate-45 inline-block text-4xl"></i>
+              WizardZ
+            </h1>
+            <div class="w-full flex flex-col items-center gap-8">
+              <h4 class="text-sm lg:text-lg font-semibold">About Us</h4>
+              <h4 class="text-sm lg:text-lg font-semibold">Services</h4>
+              <h4 class="text-sm lg:text-lg font-semibold">Use Cases</h4>
+              <h4 class="text-sm lg:text-lg font-semibold">Pricing</h4>
+              <h4 class="text-sm lg:text-lg font-semibold">Blog</h4>
+              <button
+                class="text-sm font-semibold p-[0.7rem]  rounded-lg border border-black"
+              >
+                Request a quote
+              </button>
+            </div>
+          </div>
+        </div>
+      
+      </nav>
+      <div id="center" class="w-full min-h-[80vh] flex flex-col md:flex-row justify-between p-5 my-10">
+        <div id="center-part1" class="min-h-full w-full lg:w-[50%] xl:w-[40%] flex flex-col justify-center items-center md:items-start gap-10 ">
+          <h1 class="text-4xl text-center font-bold py-4 md:text-5xl lg:text-6xl xl:text-7xl md:text-start " style="line-height: 1.25;">Navigating the digital landscape for success</h1>
+          <p class="text-center pr-0 md:text-start md:pr-5 text-sm md:text-lg lg:text-xl ">Our digital marketing agency helps businesses grow and succeed online through a range of services including SEO, PPC, social media marketing, and content creation.</p>
+          <button class="w-60 bg-black border-none text-white rounded-lg p-4">Book a consultation</button>
+        </div>
+        <div id="center-part2" class="h-full w-full lg:w-[50%] xl:w-[60%] flex flex-col justify-center items-center md:items-end">
+          <img src="https://framerusercontent.com/images/57Ruwy4ZsvnD8kCeRIyxAbfU0.png" alt="" class="w-[60%] h-[60%] aspect-square">
+        </div>
+      </div>
+    </section>
+    <section class="min-h-screen w-full h-ful relative">
+    </section>
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
