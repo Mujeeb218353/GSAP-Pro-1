@@ -7,26 +7,118 @@
     <title>GSAP Pro 5</title>
   </head>
   <body>
-    <section class="w-full h-ful relative">
-      <nav class="w-full flex items-center p-5 overflow-x-hidden">
-        <div class="w-full flex justify-between items-center" id="navbar">
+    <section
+      class="w-full relative flex justify-between items-center flex-col overflow-x-hidden bg-white"
+    >
+      <nav
+        class="w-full flex justify-center items-center fixed top-0 py-4 px-2 z-10 bg-white"
+        id="navbar"
+      >
+        <div
+          class="w-full h-full flex justify-between items-center md:w-full lg:w-11/12 xl:w-9/12 2xl:w-8/12"
+          id="lg-navbar"
+        >
           <h1
-            class="text-lg lg:text-2xl xl:text-3xl font-bold flex justify-center items-center gap-1"
+            class="text-2xl lg:text-3xl xl:text-4xl font-semibold flex justify-center items-center gap-1 text-black cursor-pointer hover:text-gray-400 transform transition-colors duration-500 ease-in"
             id="logo-lg-screen"
           >
-            <i class="ri-shining-2-fill rotate-45 inline-block text-5xl"></i>
+            <i class="ri-shining-2-fill rotate-45 inline-block text-4xl"></i>
+            Positivus
+          </h1>
+
+          <div class="hidden md:flex justify-center items-center gap-6" id="lg-menu">
+            <h4 class="text-sm lg:text-lg text-black cursor-pointer hover:text-gray-400 transform transition-colors duration-500 ease-in">About Us</h4>
+            <h4 class="text-sm lg:text-lg text-black cursor-pointer hover:text-gray-400 transform transition-colors duration-500 ease-in">Services</h4>
+            <h4 class="text-sm lg:text-lg text-black cursor-pointer hover:text-gray-400 transform transition-colors duration-500 ease-in">Use Cases</h4>
+            <h4 class="text-sm lg:text-lg text-black cursor-pointer hover:text-gray-400 transform transition-colors duration-500 ease-in">Pricing</h4>
+            <h4 class="text-sm lg:text-lg text-black cursor-pointer hover:text-gray-400 transform transition-colors duration-500 ease-in">Blog</h4>
+          </div>
+          <button class="md:hidden" id="open-menu-btn">
+            <i class="ri-menu-3-line text-2xl"></i>
+          </button>
+
+          <button
+            id="quote-btn"
+            class="hidden md:block text-sm lg:text-lg py-4 px-8 rounded-xl border border-black hover:bg-black hover:text-white transform transition-colors duration-300 ease-in"
+          >
+            Request a quote
+          </button>
+        </div>
+
+        <div
+          class="w-full min-h-screen flex flex-col gap-4 bg-white absolute right-[-100%] top-0 z-20 py-8"
+          id="side-bar"
+        >
+          <button id="close-menu" class="w-full">
+            <i class="ri-close-line absolute top-2 left-2"></i>
+          </button>
+          <h1
+            class="text-2xl font-semibold flex justify-center items-center gap-1"
+            id="logo-sm-screen"
+          >
+            <i class="ri-shining-2-fill rotate-45 inline-block text-4xl"></i>
+            Positivus
+          </h1>
+
+          <div class="flex flex-col items-center gap-6">
+            <h4 class="text-sm">About Us</h4>
+            <h4 class="text-sm">Services</h4>
+            <h4 class="text-sm">Use Cases</h4>
+            <h4 class="text-sm">Pricing</h4>
+            <h4 class="text-sm">Blog</h4>
+            <button
+              class="text-sm p-4 rounded-lg border border-black hover:bg-black hover:text-white"
+            >
+              Request a quote
+            </button>
+          </div>
+        </div>
+      </nav>
+    </section>
+    <main class="w-full flex justify-center items-center flex-col md:pt-20 px-2 overflow-x-hidden">
+      <div id="center" class="w-full lg:w-11/12 xl:w-9/12 2xl:w-8/12 flex flex-col-reverse md:flex-row justify-between items-center my-6">
+        <div id="center-part1" class="min-h-full w-full lg:w-[45%]  flex flex-col justify-center items-center md:items-start gap-10 py-2 md:py-0">
+          <h1 class="text-2xl text-center font-medium py-4 md:text-3xl lg:text-4xl xl:text-[3.7rem] md:text-start " style="line-height: 1;">Navigating the digital landscape for success</h1>
+          <p class="w-full text-center md:text-start text-sm md:text-lg lg:text-xl xl:text-[1.29rem]">Our digital marketing agency helps businesses grow and succeed online through a range of services including SEO, PPC, social media marketing, and content creation.</p>
+          <button class="w-60 bg-black text-white border border-black rounded-lg p-4 hover:bg-white hover:text-black transform transition-colors duration-300 ease-in">Book a consultation</button>
+        </div>
+        <div id="center-part2" class="h-full w-full lg:w-[45%] flex justify-center md:justify-end items-center py-12 md:py-0">
+          <img src="https://cdn.prod.website-files.com/65f786640d92f87b63915bd4/66b0fc7377aeb9ddba883762_a.svg" alt="" class="w-10/12 sm:w-8/12 md:w-[37.5rem] ">
+        </div>
+      </div>
+      <div class="w-full lg:w-11/12 xl:w-9/12 2xl:w-8/12 h-20 flex items-center  gap-4 px-2 relative overflow-x-hidden" style="margin-inline: auto;" id="marquee">
+        <img src="https://cdn.prod.website-files.com/65f786640d92f87b63915bd4/66b1272aa7fbf285dd2e2ceb_amazon.svg" loading="lazy" alt="" class="w-20 md:w-32 absolute left-[100%] item" id="item1">
+        <img src="https://cdn.prod.website-files.com/65f786640d92f87b63915bd4/66b1524e86e3054d897655f5_Company%20logo.svg" loading="lazy" alt="" class="w-20 md:w-32 absolute left-[100%] item" id="item2">
+        <img src="https://cdn.prod.website-files.com/65f786640d92f87b63915bd4/66b1278032d042d404f1a54b_hubspot.svg" loading="lazy" alt="" class="w-20 md:w-32 absolute left-[100%] item" id="item3">
+        <img src="https://cdn.prod.website-files.com/65f786640d92f87b63915bd4/66b0fc731eb667526018b24c_Company%20logo-3.svg" loading="lazy" alt="" class="w-20 md:w-32 absolute left-[100%] item" id="item4">
+        <img src="https://cdn.prod.website-files.com/65f786640d92f87b63915bd4/66b127a9a15f377e11da21f6_netflix.svg" loading="lazy" alt="" class="w-20 md:w-32 absolute left-[100%] item" id="item5">
+        <img src="https://cdn.prod.website-files.com/65f786640d92f87b63915bd4/66b127d58fbf875ed103cba2_zoom.svg" loading="lazy" alt="" class="w-20 md:w-32 absolute left-[100%] item" id="item6">
+      </div>
+    </main>
+  </body>
+  <script type="module" src="main.js"></script>
+</html>
+
+<!-- <section class="w-full h-ful relative flex justify-center items-center flex-col" id="section1">
+      <nav class="w-full lg:w-[85rem] xl:w-[75rem] flex items-center my-8 overflow-x-hidden">
+        <div class="w-full flex justify-between items-center">
+          <h1
+            class="text-lg lg:text-2xl xl:text-3xl font-semibold flex justify-center items-center gap-1"
+            id="logo-lg-screen"
+          >
+            <i class="ri-shining-2-fill rotate-45 inline-block text-4xl"></i>
             WizardZ
           </h1>
           <div
-            class="hidden md:flex justify-center items-center gap-6 md:gap-7 lg:gap-10 xl:gap-12"
+            class="hidden md:flex justify-center items-center gap-6"
           >
-            <h4 class="text-sm lg:text-lg font-semibold">About Us</h4>
-            <h4 class="text-sm lg:text-lg font-semibold">Services</h4>
-            <h4 class="text-sm lg:text-lg font-semibold">Use Cases</h4>
-            <h4 class="text-sm lg:text-lg font-semibold">Pricing</h4>
-            <h4 class="text-sm lg:text-lg font-semibold">Blog</h4>
+            <h4 class="text-sm lg:text-lg">About Us</h4>
+            <h4 class="text-sm lg:text-lg">Services</h4>
+            <h4 class="text-sm lg:text-lg">Use Cases</h4>
+            <h4 class="text-sm lg:text-lg">Pricing</h4>
+            <h4 class="text-sm lg:text-lg">Blog</h4>
             <button
-              class="text-[.8rem] lg:text-lg font-semibold p-[0.7rem] rounded-lg border border-black"
+              class="text-sm lg:text-lg py-4 px-8 rounded-xl border border-black hover:bg-black hover:text-white transform transition-all duration-600 ease-in-out"
             >
               Request a quote
             </button>
@@ -42,20 +134,20 @@
               <i class="ri-close-line absolute top-2 left-2"></i>
             </button>
             <h1
-              class="text-lg font-bold flex justify-center items-center gap-1"
+              class="text-[1rem] font-semibold flex justify-center items-center gap-1"
               id="logo-sm-screen"
             >
-              <i class="ri-shining-2-fill rotate-45 inline-block text-4xl"></i>
+              <i class="ri-shining-2-fill rotate-45 inline-block text-3xl"></i>
               WizardZ
             </h1>
-            <div class="w-full flex flex-col items-center gap-8">
-              <h4 class="text-sm lg:text-lg font-semibold">About Us</h4>
-              <h4 class="text-sm lg:text-lg font-semibold">Services</h4>
-              <h4 class="text-sm lg:text-lg font-semibold">Use Cases</h4>
-              <h4 class="text-sm lg:text-lg font-semibold">Pricing</h4>
-              <h4 class="text-sm lg:text-lg font-semibold">Blog</h4>
+            <div class="w-full flex flex-col items-center gap-6">
+              <h4 class="text-sm">About Us</h4>
+              <h4 class="text-sm">Services</h4>
+              <h4 class="text-sm">Use Cases</h4>
+              <h4 class="text-sm">Pricing</h4>
+              <h4 class="text-sm">Blog</h4>
               <button
-                class="text-sm font-semibold p-[0.7rem]  rounded-lg border border-black"
+                class="text-sm p-4  rounded-lg border border-black hover:bg-black hover:text-white"
               >
                 Request a quote
               </button>
@@ -64,19 +156,24 @@
         </div>
       
       </nav>
-      <div id="center" class="w-full min-h-[80vh] flex flex-col md:flex-row justify-between p-5 my-10">
-        <div id="center-part1" class="min-h-full w-full lg:w-[50%] xl:w-[40%] flex flex-col justify-center items-center md:items-start gap-10 ">
-          <h1 class="text-4xl text-center font-bold py-4 md:text-5xl lg:text-6xl xl:text-7xl md:text-start " style="line-height: 1.25;">Navigating the digital landscape for success</h1>
-          <p class="text-center pr-0 md:text-start md:pr-5 text-sm md:text-lg lg:text-xl ">Our digital marketing agency helps businesses grow and succeed online through a range of services including SEO, PPC, social media marketing, and content creation.</p>
-          <button class="w-60 bg-black border-none text-white rounded-lg p-4">Book a consultation</button>
+      <div id="center" class="w-full lg:w-[85rem] xl:w-[75rem] flex flex-col md:flex-row justify-between items-center my-6">
+        <div id="center-part1" class="min-h-full w-full lg:w-[45%]  flex flex-col justify-center items-center md:items-start gap-10 py-4 md:py-0">
+          <h1 class="text-2xl text-center font-medium py-4 md:text-3xl lg:text-4xl xl:text-[3.7rem] md:text-start " style="line-height: 1.25;">Navigating the digital landscape for success</h1>
+          <p class="w-full text-center md:text-start text-sm md:text-lg lg:text-xl xl:text-[1.29rem]">Our digital marketing agency helps businesses grow and succeed online through a range of services including SEO, PPC, social media marketing, and content creation.</p>
+          <button class="w-60 bg-black hover:bg-white text-white hover:text-black border border-black rounded-lg p-4">Book a consultation</button>
         </div>
-        <div id="center-part2" class="h-full w-full lg:w-[50%] xl:w-[60%] flex flex-col justify-center items-center md:items-end">
-          <img src="https://framerusercontent.com/images/57Ruwy4ZsvnD8kCeRIyxAbfU0.png" alt="" class="w-[60%] h-[60%] aspect-square">
+        <div id="center-part2" class="h-full w-full lg:w-[45%] flex justify-center md:justify-end items-center py-10 md:py-0">
+          <img src="https://cdn.prod.website-files.com/65f786640d92f87b63915bd4/66b0fc7377aeb9ddba883762_a.svg" alt="" class="w-full md:w-[37.5rem] ">
         </div>
       </div>
     </section>
-    <section class="min-h-screen w-full h-ful relative">
-    </section>
-    <script type="module" src="main.js"></script>
-  </body>
-</html>
+    <section class="w-full p-4" id="section2">
+      <div class="w-full h-20 flex items-center justify-between gap-10 px-2 relative overflow-x-hidden" style="margin-inline: auto;" id="marquee">
+        <img src="https://cdn.prod.website-files.com/65f786640d92f87b63915bd4/66b1272aa7fbf285dd2e2ceb_amazon.svg" loading="lazy" alt="" class="w-20 md:w-32 mx-10 lg:mx-0 absolute left-[100%] item" id="item1">
+        <img src="https://cdn.prod.website-files.com/65f786640d92f87b63915bd4/66b1524e86e3054d897655f5_Company%20logo.svg" loading="lazy" alt="" class="w-20 md:w-32 mx-10 lg:mx-0 absolute left-[100%] item" id="item2">
+        <img src="https://cdn.prod.website-files.com/65f786640d92f87b63915bd4/66b1278032d042d404f1a54b_hubspot.svg" loading="lazy" alt="" class="w-20 md:w-32 mx-10 lg:mx-0 absolute left-[100%] item" id="item3">
+        <img src="https://cdn.prod.website-files.com/65f786640d92f87b63915bd4/66b0fc731eb667526018b24c_Company%20logo-3.svg" loading="lazy" alt="" class="w-20 md:w-32 mx-10 lg:mx-0 absolute left-[100%] item" id="item4">
+        <img src="https://cdn.prod.website-files.com/65f786640d92f87b63915bd4/66b127a9a15f377e11da21f6_netflix.svg" loading="lazy" alt="" class="w-20 md:w-32 mx-10 lg:mx-0 absolute left-[100%] item" id="item5">
+        <img src="https://cdn.prod.website-files.com/65f786640d92f87b63915bd4/66b127d58fbf875ed103cba2_zoom.svg" loading="lazy" alt="" class="w-20 md:w-32 mx-10 lg:mx-0 absolute left-[100%] item" id="item6">
+      </div>
+    </section> -->
