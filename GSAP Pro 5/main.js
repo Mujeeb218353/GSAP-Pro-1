@@ -1,5 +1,8 @@
 import "remixicon/fonts/remixicon.css";
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/all";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const openMenuBtn = document.querySelector("#open-menu-btn");
 const sideBar = document.querySelector("#side-bar");
@@ -163,3 +166,104 @@ function processesAnimation() {
 }
 
 processesAnimation();
+
+
+function ServicesAnimation() {
+  const children = document.querySelectorAll(".child");
+
+  children.forEach((child, index) => {
+    gsap.fromTo(child, 
+      {
+        opacity: 0,
+        x: index % 2 === 0 ? "100%" : "-100%",
+      },
+      {
+        opacity: 1,
+        x: 0,
+        scrollTrigger: {
+          trigger: child,
+          start: "top 100%",
+          end: "top 50%",
+          scrub: true
+        }
+      });
+  });
+}
+
+gsap.from("#proposal-box", {
+  opacity: 0,
+  y: "50%",
+  scrollTrigger: {
+    trigger: "#proposal-box",
+    start: "top 80%",
+    end: "top 30%",
+    scrub: true
+  }
+});
+
+gsap.from("#case-studies", {
+  opacity: 0,
+  y: "50%",
+  scrollTrigger: {
+    trigger: "#case-studies",
+    start: "top 100%",
+    end: "top 30%",
+    scrub: true
+  }
+});
+
+ServicesAnimation();
+
+function ProcessAnimation() {
+  const children = document.getElementById("processes").children.length;
+  for(let i = 1; i <= children; i++) {
+    const child = document.getElementById("process" + i);
+    gsap.fromTo(child, 
+      {
+        opacity: 0,
+      },
+      {
+        opacity: 1,
+        scrollTrigger: {
+          trigger: child,
+          start: "top 80%",
+          end: "top 30%",
+          scrub: true
+        }
+      });
+  }
+}
+
+ProcessAnimation();
+
+function TeamAnimation(){
+  const children = document.getElementById("team").children.length;
+  console.log(children);
+  
+
+  for(let i=1; i<=children;i++){
+    gsap.from(`#team-member-${i}`,{
+      opacity: 0,
+      y: '50%',
+      scrollTrigger: {
+        trigger: `#team-member-${i}`,
+        start: "top 80%",
+        end: "top 30%",
+        scrub: true
+      }
+    })
+  }
+
+  gsap.from(`#team-btn`,{
+    opacity: 0,
+    y: '50%',
+    scrollTrigger: {
+      trigger: `#team-btn`,
+      start: "top 80%",
+      end: "top 30%",
+      scrub: true
+    }
+  })
+}
+
+TeamAnimation();
